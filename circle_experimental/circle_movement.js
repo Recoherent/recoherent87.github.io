@@ -13,6 +13,8 @@ ctx.strokeRect (0, 0, 500, 500);
 //creating a visual representation of the canvas
 
 var circle = function(ms, x, y, r) {
+	//shorter variable names do not lead to faster code. They can lead to more confusion though.
+	//I can tell from the methods used on ms, it's a canvas context, but it required some deduction, clarity is an important goal.
 	ms.fillStyle = "#ffffff";
 	ms.fillRect (1, 1, 498, 498);
 	//refreshing screen
@@ -33,6 +35,8 @@ var moving = false
 
 document.addEventListener('keydown', function(event) {
     if (event.keyCode == 37) {
+    	//key logging can be complicated, development on chrome is safest, but if you want to consider catching edge cases
+    	// http://unixpapa.com/js/key.html might be a good place to start.
 		
 		moving = true
 		while (moving) {
@@ -45,7 +49,9 @@ document.addEventListener('keydown', function(event) {
 		};
 		
     } //left arrow key
-    else if(event.keyCode == 39) {
+    else if(event.keyCode == 39) { 
+    	// inspect the example in airbnb's style guide, this is technically correct, but a bit messy/ugly
+    	//https://github.com/airbnb/javascript#blocks--cuddled-elses
 		
         cx = cx + 3;
 		if (cx > csize - cr) {
