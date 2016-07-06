@@ -1,7 +1,8 @@
 body {
+  background-color: #eeeeee;
   text-align: center;
 }
 div {
-  background-color: #eeeeee;
+  background-color: #ffffff;
   border: 1px solid black;
 }
