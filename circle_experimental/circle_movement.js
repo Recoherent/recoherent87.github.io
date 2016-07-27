@@ -33,6 +33,11 @@ var moving = false
 	return true;
 };*/
 
+var redirect = alert("This page doesn't work! Redirect back to home page?");
+if (redirect == true) {
+	window.location.href = "http://recoherent87.github.io/";
+};
+/*
 document.addEventListener('keydown', function(event) {
     if (event.keyCode == 37) {
     	//key logging can be complicated, development on chrome is safest, but if you want to consider catching edge cases
@@ -79,3 +84,4 @@ document.addEventListener('keydown', function(event) {
 		
     } //up arrow key
 });//movement of the circle
+*/
