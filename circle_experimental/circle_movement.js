@@ -33,7 +33,7 @@ var moving = false
 	return true;
 };*/
 
-var redirect = alert("This page doesn't work! Redirect back to home page?");
+var redirect = confirm("This page doesn't work! Redirect back to home page?");
 if (redirect == true) {
 	window.location.href = "http://recoherent87.github.io/";
 };
