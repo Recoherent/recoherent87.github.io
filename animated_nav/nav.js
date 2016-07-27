@@ -124,7 +124,7 @@ var squareline = function(option){
 
 squareline("left");
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keypress', function(event) {
 	if (event.keyCode == 65){
 		//alert("left");
 		squareline("left");
