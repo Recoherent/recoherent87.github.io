@@ -76,7 +76,7 @@ var squareline = function(option){
 				window.location.href = "http://recoherent87.github.io/circle/index.html";
 				break;
 			case 3:
-				window.location.href = "http://recoherent87.github.io/circle_experimental/index.html";
+				window.location.href = "http://recoherent87.github.io/experimental/circle.html";
 				break;
 			case 4:
 				window.location.href = "http://recoherent87.github.io/";
