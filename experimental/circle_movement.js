@@ -35,7 +35,7 @@ var moving = false
 
 var redirect = confirm("This page doesn't work! Redirect back to home page?");
 if (redirect == true) {
-	window.location.href = "http://recoherent87.github.io/";
+	window.location.href = "http://recoherent87.github.io/experimental/index.html";
 };
 /*
 document.addEventListener('keydown', function(event) {
