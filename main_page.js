@@ -1,5 +1,5 @@
 var min = 1
-var max = 7
+var max = 8
 var rand = Math.floor(Math.random() * (max - min +1)) + min
 switch (rand) {
   case 1:
@@ -9,7 +9,7 @@ switch (rand) {
     document.getElementById("splash").innerHTML = "Barely functional";
     break;
   case 3:
-    document.getElementById("splash").innerHTML = "Has a peculiar aesthetic";
+    document.getElementById("splash").innerHTML = "Not useful at all";
     break;
   case 4:
     document.getElementById("splash").innerHTML = "Mildly enjoyable";
@@ -22,6 +22,9 @@ switch (rand) {
     break;
   case 7:
     document.getElementById("splash").innerHTML = "Regularly updated!";
+    break;
+  case 8:
+    document.getElementById("splash").innerHTML = "Not useful at all";
     break;
   default:
     document.getElementById("splash").innerHTML = "Not useful at all";
