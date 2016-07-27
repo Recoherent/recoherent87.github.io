@@ -10,10 +10,10 @@ var rect_size = 200;
 var rect_buffer = 50;
 var rect_fullsize = rect_size + rect_buffer;
 
-var square1 = [rect_x, rect_y, rect_size, "one"];
-var square2 = [rect_x + rect_fullsize, rect_y, rect_size, "two"];
-var square3 = [rect_x + (rect_fullsize * 2), rect_y, rect_size, "three"];
-var square4 = [rect_x + (rect_fullsize * 3), rect_y, rect_size, "four"];
+var square1 = [rect_x, rect_y, rect_size, "Clicker", 40, 20];
+var square2 = [rect_x + rect_fullsize, rect_y, rect_size, "Movement", 60, 40];
+var square3 = [rect_x + (rect_fullsize * 2), rect_y, rect_size, "Experimental", 80, 55];
+var square4 = [rect_x + (rect_fullsize * 3), rect_y, rect_size, "Home", 30, 15];
 var selected = 2;
 
 var lightsquare = function(array){
@@ -22,8 +22,8 @@ var lightsquare = function(array){
 	ny = (array[1] - (array[2] / 2));
 	ctx.fillStyle = "#000000";
 	ctx.strokeRect (nx, ny, array[2], array[2]);
-	ctx.font = "15px serif"
-	ctx.fillText (array[3], array[0], array[1])
+	ctx.font = "30px serif"
+	ctx.fillText (array[3], array[0] - array[4], array[1])
 };
 
 var darksquare = function(array){
@@ -35,36 +35,56 @@ var darksquare = function(array){
 	ctx.fillRect (nx, ny, smallsize, smallsize);
 	ctx.fillStyle = "#000000";
 	ctx.strokeRect (nx, ny, smallsize, smallsize);
-	ctx.font = "15px serif"
-	ctx.fillText (array[3], array[0], array[1])
+	ctx.font = "25px serif"
+	ctx.fillText (array[3], array[0] - array[5] - 12.5, array[1])
 };
 var refresh = function(){
 	ctx.fillStyle = "#ffffff";
 	ctx.fillRect (0, 0, cwidth, cheight);
 	//refreshing screen
 };
-var squareline = function(direction){
-	if (direction == "left") leftif: {
+var squareline = function(option){
+	if (option == "left") leftif: {
+		selected = selected - 1;
+		if (selected < 1) {
+			selected = 1;
+			break leftif;
+		};
+		square1[0] = square1[0] + rect_fullsize;
+		square2[0] = square2[0] + rect_fullsize;
+		square3[0] = square3[0] + rect_fullsize;
+		square4[0] = square4[0] + rect_fullsize;
+	}
+	else if (option == "right") rightif: {
 		selected = selected + 1;
 		if (selected > 4) {
 			selected = 4;
-			break leftif;
+			break rightif;
 		};
 		square1[0] = square1[0] - rect_fullsize;
 		square2[0] = square2[0] - rect_fullsize;
 		square3[0] = square3[0] - rect_fullsize;
 		square4[0] = square4[0] - rect_fullsize;
 	}
-	else if (direction == "right") rightif: {
-		selected = selected - 1;
-		if (selected < 1) {
-			selected = 1;
-			break rightif;
+	else if (option == "select") selectif: {
+		//alert(selected);
+		switch (selected) {
+			case 1:
+				window.location.href = "http://recoherent87.github.io/clicker/index.html";
+				break;
+			case 2:
+				window.location.href = "http://recoherent87.github.io/circle/index.html";
+				break;
+			case 3:
+				window.location.href = "http://recoherent87.github.io/circle_experimental/index.html";
+				break;
+			case 4:
+				window.location.href = "http://recoherent87.github.io/";
+				break;
+			default:
+				window.location.href = "http://recoherent87.github.io/";
+				break;
 		};
-		square1[0] = square1[0] + rect_fullsize;
-		square2[0] = square2[0] + rect_fullsize;
-		square3[0] = square3[0] + rect_fullsize;
-		square4[0] = square4[0] + rect_fullsize;
 	};
 	refresh();
 	switch (selected) {
@@ -107,10 +127,25 @@ document.addEventListener('keydown', function(event) {
 	if (event.keyCode == 65){
 		//alert("left");
 		squareline("left");
-	};
-	//left
+	};//left/a
+	if (event.keyCode == 37){
+		//alert("left");
+		squareline("left");
+	};//left/arrow
 	if (event.keyCode == 68){
 		//alert("right");
 		squareline("right");
-	};//right
+	};//right/d
+	if (event.keyCode == 39){
+		//alert("right");
+		squareline("right");
+	};//right/arrow
+	if (event.keyCode == 32){
+		//alert("select");
+		squareline("select");
+	};//select/space
+	if (event.keyCode == 13){
+		//alert("select");
+		squareline("select");
+	};//select/enter
 });
