@@ -13,7 +13,10 @@ body {
   border: 1px solid black;
   float: left;
 }
-#column2{
+#column2 {
   border: 1px solid black;
   float: right;
+}
+#footer {
+  clear: both;
 }
