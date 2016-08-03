@@ -11,13 +11,13 @@ body {
 }
 #column1 {
   width: 45%;
-  margin: 2.5%;
+  margin: 2%;
   border: 1px solid black;
   float: left;
 }
 #column2 {
   width: 45%;
-  margin: 2.5%;
+  margin: 2%;
   border: 1px solid black;
   float: right;
 }
