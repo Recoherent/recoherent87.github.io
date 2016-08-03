@@ -10,9 +10,10 @@ body {
   display: inline;
 }
 #column1 {
-  width: 512px;
+  border: 1px solid black;
   float: left;
 }
 #column2{
+  border: 1px solid black;
   float: right;
 }
