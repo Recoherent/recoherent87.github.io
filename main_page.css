@@ -26,6 +26,8 @@ body {
   float: right;
 }
 #footer {
+  position: fixed;
+  bottom: 0;
   margin: 2%;
   border: 1px solid black;
   background-color: #fff;
