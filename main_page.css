@@ -1,9 +1,9 @@
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
   text-align: center;
 }
 #header {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid black;
 }
 #links {
@@ -13,14 +13,18 @@ body {
   width: 45%;
   margin: 2%;
   border: 1px solid black;
+  background-color: #fff;
   float: left;
 }
 #column2 {
   width: 45%;
   margin: 2%;
   border: 1px solid black;
+  background-color: #fff;
   float: right;
 }
 #footer {
+  border: 1px solid black;
+  background-color: #fff;
   clear: both;
 }
