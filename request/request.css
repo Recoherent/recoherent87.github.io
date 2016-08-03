@@ -1,1 +1,10 @@
-
+body {
+  background-color: #eee;
+  text-align: center;
+}
+#header {
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: #fff;
+  border: 1px solid black;
+}
