@@ -2,7 +2,10 @@ body {
   background-color: #eeeeee;
   text-align: center;
 }
-div {
+#header {
   background-color: #ffffff;
   border: 1px solid black;
+}
+#links {
+  display: inline;
 }
