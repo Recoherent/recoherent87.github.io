@@ -9,3 +9,9 @@ body {
 #links {
   display: inline;
 }
+#column1 {
+  float: left;
+}
+#column2{
+  float: right;
+}
