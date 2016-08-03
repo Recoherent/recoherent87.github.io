@@ -10,7 +10,7 @@ body {
   display: inline;
 }
 #column1 {
-  width: 45%;
+  width: 44.5%;
   margin: 2%;
   padding: 0.5%;
   border: 1px solid black;
@@ -18,7 +18,7 @@ body {
   float: left;
 }
 #column2 {
-  width: 45%;
+  width: 44.5%;
   margin: 2%;
   padding: 0.5%;
   border: 1px solid black;
