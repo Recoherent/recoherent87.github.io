@@ -31,7 +31,7 @@ function squareTile(x, y, color) {
 		default: acolor = "000000"; break; //defaults to black
 	};
 	console.log(acolor); //debuuuuuug
-	canvas.strokeStyle = acolor; canvas.fillStyle = acolor; canvas.fillRect((x*32)+1, (y*32)+1, 30, 30); //possibly change back to stroke
+	canvas.strokeStyle = acolor; canvas.fillStyle = acolor; canvas.strokeRect((x*32)+1, (y*32)+1, 30, 30);
 	//draws the outline
 	canvas.fillStyle = "#FFFFFF"; canvas.fillRect((x*32)+1, (y*32)+1, 30, 30);
 	//makes the outline 1px thick
@@ -47,7 +47,7 @@ function circleTile(x, y, color) {
 		default: acolor = "000000"; break; //defaults to black
 	};
 	canvas.strokeStyle = acolor; canvas.fillStyle = acolor;
-	canvas.beginPath(); canvas.arc((x*32)+16, (y*32)+16, 15, 0, 2*Math.PI); canvas.fill();  //possibly change back to stroke
+	canvas.beginPath(); canvas.arc((x*32)+16, (y*32)+16, 15, 0, 2*Math.PI); canvas.stroke();
 	canvas.fillStyle = "#FFFFFF"; canvas.beginPath(); canvas.arc((x*32)+16, (y*32)+16, 15, 0, 2*Math.PI); canvas.fill();
 	//makes the outline
 };
@@ -62,7 +62,7 @@ function smallCircle(x, y, color) {
 		default: acolor = "000000"; break; //defaults to black
 	};
 	canvas.strokeStyle = acolor; canvas.fillStyle = acolor;
-	canvas.beginPath(); canvas.arc((x*32)+16, (y*32)+16, 10, 0, 2*Math.PI); canvas.fill();  //possibly change back to stroke
+	canvas.beginPath(); canvas.arc((x*32)+16, (y*32)+16, 10, 0, 2*Math.PI); canvas.stroke();
 	canvas.fillStyle = "#FFFFFF"; canvas.beginPath(); canvas.arc((x*32)+16, (y*32)+16, 10, 0, 2*Math.PI); canvas.fill();
 	//makes the outline
 };
