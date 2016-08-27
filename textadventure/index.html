@@ -1,0 +1,85 @@
+<html>
+
+<body>
+<canvas  id="ctx" width="1900" height="825" style="border:1px solid #000000;"></canvas>
+
+<!creates form to store data!>
+<form id="input">
+	<!input bar!>
+	<input id="textInput" type="text" name="userInput" size="167" value="Input action here">
+</form>
+<!enter button!>
+<button onclick="updateText()" id="enter">Enter</button>
+
+<script>
+//finsihing canvas
+var ctx = document.getElementById("ctx").getContext("2d");
+
+//conrols the y cooridinate of the next enter into the text log
+var textY = 530;
+
+//setfont
+ctx.font = '100 px Arial';
+
+//splitting screen into panels
+//graphic panel
+ctx.beginPath();
+ctx.lineWidth="2";
+//color panel for debug ctx.strokeStyle="red";
+ctx.rect(0, 0, 1200, 500);
+ctx.stroke();
+
+//text panel
+ctx.beginPath();
+ctx.lineWith="2";
+//color panel for debug ctx.strokeStyle="green";
+ctx.rect(0, 500, 1900 ,325);
+ctx.stroke();
+
+//ease of use funtion
+function y()
+{
+	textY = textY + 15;
+}
+
+/*
+this peice of code should let the user use the ENTER key to push text to the log but its not working
+document.getElementById("textInput")
+    .addEventListener("keypress", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("enter").click();
+    }
+});
+*/
+
+//updates text log
+function updateText()
+{
+	
+	//gets data from form
+	getElement = document.getElementById("input");
+	input = getElement.elements["userInput"].value;
+	
+	if (input === "Input action here")
+	{
+		alert("Please type somthing into the text box")
+	}
+	else if (input === "reset")
+	{
+		//ToDO: make reset func
+	}
+	else
+	{
+		//writes it to screen
+		ctx.fillText(input, 15, textY);
+		y();
+		//IDEA: to prevent feuture hazards consider using stroke() and beginPath() functions
+		//NOTE: at some point all the text will start to go off screen
+	}
+}
+
+
+</script>
+</body>
+</html>
