@@ -1,85 +1,40 @@
-<html>
-
 <body>
-<canvas  id="ctx" width="1900" height="825" style="border:1px solid #000000;"></canvas>
+<title>Reco's Javascript</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="main_page.css"/>
+<div id="header">
+  <h1>Reco's Adventures in Javascript</h1>
+  <h3 id="splash">Not useful at all</h3>
+  <script src="main_page.js"></script>
+</div>
 
-<!creates form to store data!>
-<form id="input">
-	<!input bar!>
-	<input id="textInput" type="text" name="userInput" size="167" value="Input action here">
-</form>
-<!enter button!>
-<button onclick="updateText()" id="enter">Enter</button>
+<div id="links">
+  <div id="column1">
+    <!--<a href="http://recoherent87.github.io/clicker/index.html"><img src="clickericon.png" alt="Clicker game" height="42%" width="42%"></a>-->
+    <p><a href="http://recoherent87.github.io/clicker/index.html">Clicker game</a></p>
+    <p>A test to get mouse input using Javascript.</p>
+    <p><a href="http://recoherent87.github.io/animated_nav/index.html">Animated page navigation</a></p>
+    <p>Navigate the site in style!</p>
+    <p><a href="http://recoherent87.github.io/board/index.html">Billboard</a></p>
+    <p>Post global messages for everyone to see.</p>
+    <p><a href="http://recoherent87.github.io/tiles/index.html">Tiles</a></p>
+    <p>A renderer for tiles on a screen.</p>
+  </div>
+  
+  <div id="column2">
+    <!--<a href="http://recoherent87.github.io/circle/index.html"><img src="circleicon.png" alt="Circle movement" height="42%" width="42%"></a>-->
+    <p><a href="http://recoherent87.github.io/circle/index.html">Circle movement</a></p>
+    <p>Move a circle around, but not well.</p>
+    <p><a href="http://recoherent87.github.io/experimental/index.html">Experimental Projects</a></p>
+    <p>These are projects that will never work.</p>
+    <p><a href="http://recoherent87.github.io/textadventure/index.html">Text Adventure</a></p>
+    <p>Adventure! Doesn't work well yet.</p>
+    <p><a href="https://github.com/Recoherent87/recoherent87.github.io">Repository</a></p>
+    <p>Look at the code for the site.</p>
+  </div>
+</div>
 
-<script>
-//finsihing canvas
-var ctx = document.getElementById("ctx").getContext("2d");
-
-//conrols the y cooridinate of the next enter into the text log
-var textY = 530;
-
-//setfont
-ctx.font = '100 px Arial';
-
-//splitting screen into panels
-//graphic panel
-ctx.beginPath();
-ctx.lineWidth="2";
-//color panel for debug ctx.strokeStyle="red";
-ctx.rect(0, 0, 1200, 500);
-ctx.stroke();
-
-//text panel
-ctx.beginPath();
-ctx.lineWith="2";
-//color panel for debug ctx.strokeStyle="green";
-ctx.rect(0, 500, 1900 ,325);
-ctx.stroke();
-
-//ease of use funtion
-function y()
-{
-	textY = textY + 15;
-}
-
-/*
-this peice of code should let the user use the ENTER key to push text to the log but its not working
-document.getElementById("textInput")
-    .addEventListener("keypress", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13) {
-        document.getElementById("enter").click();
-    }
-});
-*/
-
-//updates text log
-function updateText()
-{
-	
-	//gets data from form
-	getElement = document.getElementById("input");
-	input = getElement.elements["userInput"].value;
-	
-	if (input === "Input action here")
-	{
-		alert("Please type somthing into the text box")
-	}
-	else if (input === "reset")
-	{
-		//ToDO: make reset func
-	}
-	else
-	{
-		//writes it to screen
-		ctx.fillText(input, 15, textY);
-		y();
-		//IDEA: to prevent feuture hazards consider using stroke() and beginPath() functions
-		//NOTE: at some point all the text will start to go off screen
-	}
-}
-//easter egg
-
-</script>
+<div id="footer">
+  <p><a href="https://fireminer99.github.io/">A friend's site</a></p>
+</div>
 </body>
-</html>
