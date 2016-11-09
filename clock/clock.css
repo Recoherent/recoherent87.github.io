@@ -1,3 +1,6 @@
+body {
+  background-color: #999;
+}
 #back {
   width: 500px;
   margin: 2%;
@@ -7,7 +10,7 @@
   float: left;
 }
 #hex {
-  color: "#fff"
+  color: #fff;
   position: relative; top: 50%; margin-top: -32px;
   text-align: center;
 }
