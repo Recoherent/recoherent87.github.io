@@ -2,7 +2,7 @@ body {
   background-color: #999;
 }
 #back {
-  display: block;
+  display: inline;
   text-align: center;
   width: 75px;
   margin: 0.5%;
@@ -12,10 +12,10 @@ body {
   float: left;
 }
 #hex {
-  display: block;
+  display: inline;
   font-family: "Courier New", Courier, monospace;
   color: #fff;
-  position: relative; top: 50%; margin-top: -32px;
-  margin-top: 32px;
-  text-align: center;
+  float: right;
+  margin: 0.5%;
+  text-align: right;
 }
