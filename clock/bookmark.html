@@ -1,0 +1,16 @@
+<body>
+
+  <p>
+  javascript:(function()%7Bvar x %3D document.createElement("div")%3Bvar t %3D document.createTextNode("%23000000")%3Bx.appendChild(t)%3Bx.setAttribute("style"%2C "position%3A fixed%3B left%3A 20px%3B top%3A 20px%3B display%3A inline%3B text-align%3A center%3B width%3A 75px%3B margin%3A 0.5%25%3B padding%3A 0.1%25%3B border%3A 1px solid black%3B background-color%3A %23fff%3B float%3A left%3B")%3Bdocument.body.appendChild(x)%3Bvar d%2C h%2C m%2C s%2C color%3Bfunction displayTime() %7Bd %3D new Date()%3Bh %3D d.getHours()%3Bm %3D d.getMinutes()%3Bs %3D d.getSeconds()%3Bif(h <%3D 9) h %3D '0'%2Bh%3Bif(m <%3D 9) m %3D '0'%2Bm%3Bif(s <%3D 9) s %3D '0'%2Bs%3Bcolor %3D "%23"%2Bh%2Bm%2Bs%3Bdocument.body.style.background %3D color%3Bx.innerHTML %3D color%3BsetTimeout(displayTime%2C 1000)%3B%7DdisplayTime()%7D)()
+  </p>
+  
+  <h5>
+  This is a bookmarklet that will change the background of a page into a hex clock, and add a floating indicator.
+  <h5>
+  
+  <p>
+  To use, first create a bookmark and name it something. 
+  Then, right-click on the bookmark in your bar and hit 'edit'. 
+  Copy the code above, and paste it in the 'URL:' box. Then, you can save it and use it on any site. 
+  Be aware that it won't work as well on some pages, and not at all on others. 
+  </p>
