@@ -1,5 +1,14 @@
 <body>
 <script>
-
+  var sides, amount, number;
+  
+  amount = prompt("How many dice will you roll?", 1);
+  sides = prompt("How many sides will the dice have?", 6);
+  
+  for(var i = 0; i < amount; i++){
+    number = number + Math.floor((Math.random() * parseInt(sides)) + 1);
+  };
+  
+  alert(number);
 </script>
 </body>
