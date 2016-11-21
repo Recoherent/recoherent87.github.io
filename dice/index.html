@@ -9,35 +9,44 @@
     sidesText = "How many sides will the dice have?";
     
     function amount() {
+      console.log("amount");
       amount = parseInt(prompt(amountText, 1), 10);
+      console.log(amount);
       if (isNan(amount)) {
         amountText = "Improper value given. Try again.";
         amount();
       };
+      console.log("to sides");
       sides();
     };
     
     function sides() {
+      console.log("sides");
       sides = parseInt(prompt(sidesText, 6), 10);
+      console.log(sides);
       if (isNan(sides)) {
         sidesText = "Improper value given. Try again.";
         sides();
       };
+      console.log("to roll");
       roll();
     };
     
     function roll() {
+      console.log("roll");
       for(var i = 0; i < amount; i++){
         number = number + Math.floor((Math.random() * sides) + 1);
       };
-      
+      console.log("done for");
       if (isNan(number)) {
         alert("An error occurred. Please try again.");
         dice();
       };
+      console.log("done");
       alert(number);
     };
     
+    console.log("ran dice");
     amount();
   
   };
