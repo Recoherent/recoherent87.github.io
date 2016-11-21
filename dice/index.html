@@ -1,12 +1,29 @@
 <body>
 <script>
   var sides, amount, number;
+  var amountText, sidesText;
   
-  amount = prompt("How many dice will you roll?", 1);
-  sides = prompt("How many sides will the dice have?", 6);
+  amountText = "How many dice will you roll?";
+  sidesText = "How many sides will the dice have?";
+  
+  function amount() {
+    amount = parseInt(prompt(amountText, 1), 10);
+    if (isNan(amount)) {
+      amountText = "Improper value given. Try again.";
+      amount();
+    };
+  };
+  
+  function sides() {
+    sides = parseInt(prompt(sidesText, 6), 10);
+    if (isNan(sides)) {
+      sidesText = "Improper value given. Try again.";
+      sides();
+    };
+  };
   
   for(var i = 0; i < amount; i++){
-    number = number + Math.floor((Math.random() * parseInt(sides)) + 1);
+    number = number + Math.floor((Math.random() * sides) + 1);
   };
   
   alert(number);
