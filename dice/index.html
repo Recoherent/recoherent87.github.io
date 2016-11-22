@@ -1,5 +1,12 @@
 <body>
 <script>
+  function plog(text) {
+    var p = document.createElement("P");
+    var t = document.createTextNode(text);
+    p.appendChild(t);
+    document.body.appendChild(p);
+  };
+  
   var sides, amount, number;
   var amountText, sidesText;
   
@@ -9,40 +16,41 @@
     sidesText = "How many sides will the dice have?";
     
     function amount() {
-      console.log("amount");
+      plog("amount");
       amount = parseInt(prompt(amountText, 1), 10);
-      console.log(amount);
+      plog(amount);
       if (Number.isNaN(amount)) {
         amountText = "Improper value given. Try again.";
         amount();
       };
-      console.log("to sides");
+      plog("to sides");
       sides();
     };
     
     function sides() {
-      console.log("sides");
+      plog("sides");
       sides = parseInt(prompt(sidesText, 6), 10);
-      console.log(sides);
+      plog(sides);
       if (Number.isNaN(sides)) {
         sidesText = "Improper value given. Try again.";
         sides();
       };
-      console.log("to roll");
+      plog("to roll");
       roll();
     };
     
     function roll() {
-      console.log("roll");
+      plog("roll");
       for(var i = 0; i < amount; i++){
         number = number + Math.floor((Math.random() * sides) + 1);
       };
-      console.log("done for");
+      plog("done for");
       if (Number.isNaN(number)) {
+        plog(number);
         alert("An error occurred. Please try again.");
         dice();
       };
-      console.log("done");
+      plog(number);
       alert(number);
     };
     
