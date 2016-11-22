@@ -12,7 +12,7 @@
       console.log("amount");
       amount = parseInt(prompt(amountText, 1), 10);
       console.log(amount);
-      if (isNan(amount)) {
+      if (Number.isNan(amount)) {
         amountText = "Improper value given. Try again.";
         amount();
       };
@@ -24,7 +24,7 @@
       console.log("sides");
       sides = parseInt(prompt(sidesText, 6), 10);
       console.log(sides);
-      if (isNan(sides)) {
+      if (Number.isNan(sides)) {
         sidesText = "Improper value given. Try again.";
         sides();
       };
@@ -38,7 +38,7 @@
         number = number + Math.floor((Math.random() * sides) + 1);
       };
       console.log("done for");
-      if (isNan(number)) {
+      if (Number.isNan(number)) {
         alert("An error occurred. Please try again.");
         dice();
       };
