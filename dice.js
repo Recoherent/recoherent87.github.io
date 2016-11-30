@@ -56,7 +56,9 @@ function rolldice() {
       rolldice();
     };
     //plog(number);
-    alert(number);
+    if (confirm(number + ". Roll again?")) {
+      roll();
+    };
   };
   
   //console.log("ran dice");
