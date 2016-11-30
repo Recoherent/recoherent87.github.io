@@ -3,7 +3,7 @@ var max = 8
 var rand = Math.floor(Math.random() * (max - min +1)) + min
 switch (rand) {
   case 1:
-    document.getElementById("splash").innerHTML = "Not useful at all";
+    document.getElementById("splash").innerHTML = "Made of electrons";
     break;
   case 2:
     document.getElementById("splash").innerHTML = "Barely functional";
@@ -21,10 +21,10 @@ switch (rand) {
     document.getElementById("splash").innerHTML = "Distinctly monochrome";
     break;
   case 7:
-    document.getElementById("splash").innerHTML = "Regularly updated!";
+    document.getElementById("splash").innerHTML = "Regularly updated";
     break;
   case 8:
-    document.getElementById("splash").innerHTML = "Not useful at all";
+    document.getElementById("splash").innerHTML = "WARNING: Side effects include nausea, vomitting, death";
     break;
   default:
     document.getElementById("splash").innerHTML = "Not useful at all";
