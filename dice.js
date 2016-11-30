@@ -1,65 +1,65 @@
+/*
 function plog(text) {
   var p = document.createElement("P");
   var t = document.createTextNode(text);
   p.appendChild(t);
   document.body.appendChild(p);
 };
+*/
 
-var sides, amount;
-var amountText, sidesText;
+function rolldice() {
+  
+  var sides, amount;
+  var amountText, sidesText;
 
-function dice() {
- 
   amountText = "How many dice will you roll?";
   sidesText = "How many sides will the dice have?";
 
   function amount() {
-    plog("amount");
+    //plog("amount");
     amount = parseInt(prompt(amountText, 1), 10);
-    plog(amount);
+    //plog(amount);
     if (Number.isNaN(amount)) {
       amountText = "Improper value given. Try again.";
       amount();
     };
-    plog("to sides");
+    //plog("to sides");
     sides();
   };
   
   function sides() {
-    plog("sides");
+    //plog("sides");
     sides = parseInt(prompt(sidesText, 6), 10);
-    plog(sides);
+    //plog(sides);
     if (Number.isNaN(sides)) {
       sidesText = "Improper value given. Try again.";
       sides();
     };
-    plog("to roll");
+    //plog("to roll");
     roll();
   };
   
   function roll() {
     var number = 0;
-    plog("roll");
-    plog(number);
-    plog("begin for");
+    //plog("roll");
+    //plog(number);
+    //plog("begin for");
     for(var i = 0; i < amount; i++){
       number = number + Math.floor((Math.random() * sides) + 1);
-      plog(i);
-      plog(number);
+      //plog(i);
+      //plog(number);
     };
-    plog("done for");
+    //plog("done for");
     if (Number.isNaN(number)) {
-      plog(number);
+      //plog(number);
       alert("An error occurred. Please try again.");
-      dice();
+      rolldice();
     };
-    plog(number);
+    //plog(number);
     alert(number);
   };
   
-  console.log("ran dice");
+  //console.log("ran dice");
   amount();
   
 };
-  
-dice();
