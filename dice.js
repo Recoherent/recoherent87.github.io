@@ -17,9 +17,9 @@ function rolldice() {
 
   function amount() {
     //plog("amount");
-    amount = parseInt(prompt(amountText, 1), 10);
-    //plog(amount);
-    if (Number.isNaN(amount)) {
+    numAmount = parseInt(prompt(amountText, 1), 10);
+    //plog(numAmount);
+    if (Number.isNaN(numAmount)) {
       amountText = "Improper value given. Try again.";
       amount();
     };
@@ -29,9 +29,9 @@ function rolldice() {
   
   function sides() {
     //plog("sides");
-    sides = parseInt(prompt(sidesText, 6), 10);
-    //plog(sides);
-    if (Number.isNaN(sides)) {
+    numSides = parseInt(prompt(sidesText, 6), 10);
+    //plog(numSides);
+    if (Number.isNaN(numSides)) {
       sidesText = "Improper value given. Try again.";
       sides();
     };
@@ -44,8 +44,8 @@ function rolldice() {
     //plog("roll");
     //plog(number);
     //plog("begin for");
-    for(var i = 0; i < amount; i++){
-      number = number + Math.floor((Math.random() * sides) + 1);
+    for(var i = 0; i < numAmount; i++){
+      number = number + Math.floor((Math.random() * numSides) + 1);
       //plog(i);
       //plog(number);
     };
