@@ -9,12 +9,12 @@ function displayTime() {
     bm = (m*4).toString(16);
     bs = (s*4).toString(16);
     
-    backgroundcolor = "#"+bh+bm+bs;
-    
     //add zero to the left of the numbers if they are single digits
-    if(h <= 9) h = '0'+h;
-    if(m <= 9) m = '0'+m;
-    if(s <= 9) s = '0'+s;
+    if(h <= 9) h = '0'+h; if(h <= 15) bh = "0"+bh
+    if(m <= 9) m = '0'+m; if(m <= 15) bm = "0"+bm
+    if(s <= 9) s = '0'+s; if(s <= 15) bs = "0"+bs
+    
+    backgroundcolor = "#"+bh+bm+bs;
 
     displaycolor = "#"+h+m+s+"["+bh+bm+bs+"]";
     
